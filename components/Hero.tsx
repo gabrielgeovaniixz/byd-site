@@ -119,7 +119,6 @@ export default function Hero() {
                   muted
                   loop
                   playsInline
-                  poster="/images/carro.png"
                   aria-label="Vídeo do BYD Song Plus EV"
                 />
               </div>
