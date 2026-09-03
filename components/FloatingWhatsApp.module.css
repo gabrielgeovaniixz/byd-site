@@ -1,0 +1,26 @@
+.button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #042d1d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.38);
+}
+
+@media (max-width: 560px) {
+  .button {
+    right: 16px;
+    bottom: 16px;
+    min-width: 120px;
+  }
+}

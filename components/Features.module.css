@@ -1,0 +1,78 @@
+.section {
+  padding: 120px clamp(24px, 7vw, 120px) 80px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.header {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(5, 6, 7, 0.68);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 28px 24px;
+  background: rgba(5, 6, 7, 0.02);
+  border: 1px solid rgba(5, 6, 7, 0.08);
+  border-radius: 18px;
+}
+
+.value {
+  display: block;
+  color: var(--color-accent);
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.label {
+  margin: 18px 0 10px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.description {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(5, 6, 7, 0.7);
+}
+
+@media (max-width: 840px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding-top: 90px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

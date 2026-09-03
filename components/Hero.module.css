@@ -1,0 +1,457 @@
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(0, 230, 195, 0.16), transparent 18%),
+    radial-gradient(circle at 20% 100%, rgba(0, 230, 195, 0.08), transparent 22%),
+    linear-gradient(180deg, #06090a 0%, #090d10 42%, #050607 100%);
+  color: #f5f4f0;
+}
+
+.container {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px clamp(20px, 4vw, 56px) 28px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.brandWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2vw, 36px);
+  flex: 1;
+}
+
+.navLink {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 244, 240, 0.78);
+  transition: opacity 0.2s ease;
+}
+
+.navLink:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+}
+
+.iconButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: #f5f4f0;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.iconButton span {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  background: #f5f4f0;
+  border-radius: 999px;
+}
+
+.iconButton {
+  gap: 4px;
+  flex-direction: column;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.2fr);
+  align-items: center;
+  min-height: calc(100vh - 96px);
+  gap: clamp(20px, 3vw, 42px);
+  padding-top: clamp(20px, 2vw, 36px);
+}
+
+.copy {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  padding-left: clamp(8px, 1.2vw, 24px);
+  margin-top: -8px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0, 230, 195, 0.9);
+}
+
+.title {
+  margin: 0;
+  max-width: 430px;
+  font-size: clamp(3rem, 4.7vw, 5.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  font-weight: 300;
+  color: #f5f4f0;
+  text-wrap: balance;
+}
+
+.subtitle {
+  margin: 24px 0 32px;
+  max-width: 540px;
+  font-size: clamp(1.02rem, 1.45vw, 1.35rem);
+  line-height: 1.6;
+  color: rgba(245, 244, 240, 0.74);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.primaryButton {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: #00e6c3;
+  color: #061311;
+  padding: 18px 36px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 16px 32px rgba(0, 230, 195, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 230, 195, 0.32);
+}
+
+.vehicleFooter {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 500px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footerMeta {
+  padding-top: 2px;
+}
+
+.footerMeta p {
+  max-width: 430px;
+}
+
+.vehicleName {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.footerMeta p {
+  margin: 0;
+  color: rgba(245, 244, 240, 0.7);
+  line-height: 1.7;
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.colorSelector {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 720px;
+  padding-right: clamp(8px, 1.5vw, 18px);
+}
+
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: 8% 7% 10% 8%;
+  border-radius: 32% 68% 44% 56% / 42% 40% 60% 58%;
+  background: radial-gradient(circle at center, rgba(0, 230, 195, 0.18), rgba(0, 230, 195, 0.04) 38%, transparent 67%);
+  filter: blur(12px);
+}
+
+.orb {
+  position: absolute;
+  width: min(72vw, 720px);
+  height: min(72vw, 720px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 230, 195, 0.16), rgba(0, 230, 195, 0.03) 42%, transparent 64%);
+  filter: blur(10px);
+}
+
+.carStage {
+  position: relative;
+  z-index: 1;
+  width: min(70vw, 870px);
+  height: min(42vw, 430px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  transform: translateX(8px);
+}
+
+.carShadow {
+  position: absolute;
+  bottom: 8px;
+  width: 76%;
+  height: 46px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.72), transparent 68%);
+  filter: blur(10px);
+}
+
+.carVideoWrap {
+  position: relative;
+  width: min(68vw, 820px);
+  height: min(38vw, 420px);
+  z-index: 2;
+  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.42));
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.carVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: transparent;
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.callout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+}
+
+.range {
+  top: 16%;
+  left: 5%;
+}
+
+.rating {
+  top: 16%;
+  right: 7%;
+}
+
+.zero {
+  bottom: 18%;
+  left: 8%;
+}
+
+.charge {
+  bottom: 18%;
+  right: 8%;
+}
+
+.calloutDot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00e6c3;
+  box-shadow: 0 0 0 6px rgba(0, 230, 195, 0.15);
+}
+
+.calloutCard {
+  position: relative;
+  min-width: 180px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 6, 7, 0.72);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 230, 195, 0.06);
+}
+
+.calloutCard::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  width: 22px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.18), rgba(0, 230, 195, 0.8));
+  transform: translateY(-50%);
+}
+
+.calloutLabel {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 244, 240, 0.64);
+}
+
+.calloutCard strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.calloutCard small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(245, 244, 240, 0.7);
+}
+
+@media (max-width: 980px) {
+  .content {
+    grid-template-columns: 1fr;
+    padding-top: 32px;
+  }
+
+  .copy {
+    max-width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .primaryButton {
+    display: inline-flex;
+  }
+
+  .vehicleFooter {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .visual {
+    min-height: 620px;
+  }
+
+  .callout {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 720px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .colorRow {
+    justify-content: center;
+  }
+
+  .visual {
+    min-height: 520px;
+  }
+
+  .carStage {
+    width: min(86vw, 620px);
+    height: 260px;
+  }
+
+  .range {
+    left: 2%;
+    top: 12%;
+  }
+
+  .rating {
+    right: 2%;
+    top: 12%;
+  }
+
+  .zero {
+    left: 0;
+    bottom: 18%;
+  }
+
+  .charge {
+    right: 0;
+    bottom: 18%;
+  }
+
+  .calloutCard {
+    min-width: 150px;
+  }
+}

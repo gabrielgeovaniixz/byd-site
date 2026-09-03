@@ -1,0 +1,138 @@
+.cta {
+  position: relative;
+  min-height: 100vh;
+  background: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px clamp(24px, 8vw, 120px);
+}
+
+.inner {
+  max-width: 1040px;
+  width: 100%;
+  text-align: center;
+}
+
+.headline {
+  margin: 0 auto 24px;
+  max-width: 900px;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  color: rgba(245, 244, 240, 0.98);
+}
+
+.support {
+  margin: 0 auto 42px;
+  max-width: 770px;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  color: rgba(245, 244, 240, 0.72);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.metrics {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 0 auto 42px;
+}
+
+.metric {
+  min-width: 160px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+}
+
+.metric strong {
+  display: block;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--color-paper);
+}
+
+.metric span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 244, 240, 0.7);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  padding: 20px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-ink);
+  box-shadow: 0 18px 42px rgba(0, 230, 195, 0.18);
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-2px);
+}
+
+.secondary {
+  border: 1px solid rgba(245, 244, 240, 0.2);
+  color: var(--color-paper);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.secondary:hover {
+  border-color: rgba(0, 230, 195, 0.7);
+  color: var(--color-accent);
+}
+
+@media (max-width: 560px) {
+  .cta {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .metrics {
+    gap: 14px;
+  }
+
+  .metric {
+    flex: 1 1 100%;
+  }
+}
